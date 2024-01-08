@@ -4,18 +4,12 @@
   
   
   <entry>
-    <title>test</title>
-    <link href="/2023/12/06/test/"/>
-    <url>/2023/12/06/test/</url>
+    <title>Basics of Neural Network Programming</title>
+    <link href="/2024/01/07/Basics-of-Neural-Network-Programming/"/>
+    <url>/2024/01/07/Basics-of-Neural-Network-Programming/</url>
     
-    <content type="html"><![CDATA[<p>This is a test post</p><img src="/2023/12/06/test/test.png" class="">]]></content>
+    <content type="html"><![CDATA[<h3 id="1-Binary-Classification"><a href="#1-Binary-Classification" class="headerlink" title="1 Binary Classification"></a>1 Binary Classification</h3><h3 id="2-Logistic-Regression"><a href="#2-Logistic-Regression" class="headerlink" title="2 Logistic Regression"></a>2 Logistic Regression</h3><h3 id="3-Logistic-Regression-cost-function"><a href="#3-Logistic-Regression-cost-function" class="headerlink" title="3 Logistic Regression cost function"></a>3 Logistic Regression cost function</h3><p>$\hat{y} &#x3D; \sigma(w^Tx^{(i)}+b), \text{ where } \sigma(z^{(i)} &#x3D; \frac{1}{1+e^{-z^{(i)}}})$</p><p>Given ${(x^{(1)}, y^{(1)}, \dots,(x^{(m)},y^{(m)})},$ want  $\hat{y}^{(i)} \approx y^{(i)}$.</p><p><strong>Loss (error) function</strong>:<br>$$<br>L(\hat{y}, y) &#x3D; \frac{1}{2} (\hat{y} - y)^2<br>$$<br>$L(\hat{y}, y) &#x3D; -(y\log\hat{y} + (1-y)\log(1-\hat{y})$</p><ul><li>If $y&#x3D;1, \ L(\hat{y}, y) &#x3D; -\log\hat{y} \leftarrow \text{ want } \log\hat{y} \text{ large, want } \hat{y} \text{ large}.$</li><li>If $y&#x3D;0, \ L(\hat{y}, y) &#x3D; -\log(1-\hat{y}) \leftarrow \text{ want } \log(1-\hat{y}) \text{ large, want } \hat{y} \text{ small}.$</li></ul><p><strong>Cost function</strong>:<br>$$<br>J(w,b) &#x3D; \frac{1}{m}\sum_{i&#x3D;1}^m L(\hat{y}^{(i)}, y^{(i)})<br>&#x3D; -\frac{1}{m}\sum_{i&#x3D;1}^m[y^{(i)}\log\hat{y}^{(i)} + (1-y^{(i)})\log(1-\hat{y}^{(i)})]<br>$$</p>]]></content>
     
-    
-    <categories>
-      
-      <category>Test</category>
-      
-    </categories>
     
     
   </entry>
