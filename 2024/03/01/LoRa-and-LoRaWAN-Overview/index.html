@@ -23,10 +23,31 @@
 <meta property="og:site_name" content="Xin Wang">
 <meta property="og:description" content="What is each component in LoRaWAN?  End Device: A sensor or actuator that connects wirelessly to a LoRaWAN network using LoRa modulation. Gateway: Receives LoRa RF messages from end devices and forwar">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240218211820630.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219013129359.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219013447790.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219181813957.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219181831807.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219184305654.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220004322448.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220004626050.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220005916368.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220190919788.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220191303482.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220191521393.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220192044853.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220192527444.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220200910912.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220200924446.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220225630534.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220225815198.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220230346074.png">
+<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220231412533.png">
 <meta property="article:published_time" content="2024-03-02T03:55:12.000Z">
 <meta property="article:modified_time" content="2024-03-02T03:56:33.604Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240218211820630.png">
   
   
   
@@ -319,7 +340,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          563 words
+          340 words
         
       </span>
     
@@ -330,7 +351,7 @@ mjx-container[display="true"] + br {
         
         
         
-          5 mins
+          3 mins
         
       </span>
     
@@ -374,25 +395,52 @@ mjx-container[display="true"] + br {
                 
                 <p><strong>What is each component in LoRaWAN?</strong></p>
 <ul>
-<li><strong>End Device:</strong> A sensor or actuator that connects wirelessly to a LoRaWAN network using LoRa modulation.</li>
-<li><strong>Gateway:</strong> Receives LoRa RF messages from end devices and forwards them to the network server, connected via an IP backbone.</li>
-<li><strong>Network Server (LNS):</strong> Manages network parameters, establishes secure connections, and ensures the authenticity and integrity of messages and devices.</li>
-<li><strong>Application Server:</strong> Handles, manages, and interprets sensor application data, generating application-layer downlink payloads.</li>
-<li><strong>Join Server:</strong> Manages the over-the-air activation process, handling join-request and join-accept messages, and session key derivations.</li>
+<li><strong>End Device:</strong> A sensor or actuator that connects
+wirelessly to a LoRaWAN network using LoRa modulation.</li>
+<li><strong>Gateway:</strong> Receives LoRa RF messages from end devices
+and forwards them to the network server, connected via an IP
+backbone.</li>
+<li><strong>Network Server (LNS):</strong> Manages network parameters,
+establishes secure connections, and ensures the authenticity and
+integrity of messages and devices.</li>
+<li><strong>Application Server:</strong> Handles, manages, and
+interprets sensor application data, generating application-layer
+downlink payloads.</li>
+<li><strong>Join Server:</strong> Manages the over-the-air activation
+process, handling join-request and join-accept messages, and session key
+derivations.</li>
 </ul>
 <p><strong>What is the Join Procedure in LoRaWAN?</strong></p>
-<p>The Join Procedure in LoRaWAN involves a two-step process for network access: <strong>Join Request</strong> and <strong>Join Accept</strong>. The end device initiates the process by sending a Join Request to the network, which includes device identifiers. The Join Server authenticates this request using pre-shared keys and responds with a Join Accept message if successful. This process establishes mutual authentication and enables the derivation of session keys (NwkSKey for network and AppSKey for application), securing subsequent communications between the end device and the network.</p>
+<p>The Join Procedure in LoRaWAN involves a two-step process for network
+access: <strong>Join Request</strong> and <strong>Join Accept</strong>.
+The end device initiates the process by sending a Join Request to the
+network, which includes device identifiers. The Join Server
+authenticates this request using pre-shared keys and responds with a
+Join Accept message if successful. This process establishes mutual
+authentication and enables the derivation of session keys (NwkSKey for
+network and AppSKey for application), securing subsequent communications
+between the end device and the network.</p>
 <p><strong>How does LoRaWAN protect each data packet?</strong></p>
-<p>LoRaWAN protects each data packet through encryption and integrity checks. Each packet is encrypted using the AES algorithm with two types of keys: the Network Session Key (NwkSKey) for network layer security and the Application Session Key (AppSKey) for application payload encryption. This ensures that the content is confidential and cannot be tampered with during transmission. Additionally, a unique frame counter is used for each packet to protect against replay attacks, ensuring that each packet is fresh and hasn’t been intercepted and resent by malicious actors.</p>
+<p>LoRaWAN protects each data packet through encryption and integrity
+checks. Each packet is encrypted using the AES algorithm with two types
+of keys: the Network Session Key (NwkSKey) for network layer security
+and the Application Session Key (AppSKey) for application payload
+encryption. This ensures that the content is confidential and cannot be
+tampered with during transmission. Additionally, a unique frame counter
+is used for each packet to protect against replay attacks, ensuring that
+each packet is fresh and hasn't been intercepted and resent by malicious
+actors.</p>
 <hr>
-<p>LoRa is an RF modulation technology for low-power, wide-area networks (LPWANs).</p>
+<p>LoRa is an RF modulation technology for low-power, wide-area networks
+(LPWANs).</p>
 <blockquote>
 <p>RF: Radio Frequency</p>
 <p>LoRa: Long-Range</p>
 </blockquote>
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>Network</th>
 <th>Range</th>
 <th>Data Rates</th>
@@ -400,107 +448,162 @@ mjx-container[display="true"] + br {
 <th>Cost</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>Traditional Cellular</td>
 <td>Long</td>
 <td>High</td>
 <td>Low</td>
 <td>High</td>
 </tr>
-<tr>
+<tr class="even">
 <td>LPWAN</td>
 <td>Long</td>
 <td>Low</td>
 <td>Long</td>
 <td>Low</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Cat-M1</td>
 <td>Long</td>
 <td>High</td>
 <td>Low</td>
 <td>Medium</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Local Area Network (Wi-Fi)</td>
 <td>Short</td>
 <td>High</td>
 <td>Low</td>
 <td>Medium</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>Narrow-Band IoT</td>
 <td>Stationary/Short (indoor coverage)</td>
 <td>Low</td>
 <td>Good</td>
 <td>Low</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Personal Area Network (Bluetooth)</td>
 <td>Very Short</td>
 <td>Low</td>
 <td>Good</td>
 <td>Low</td>
 </tr>
-</tbody></table>
-<h3 id="Radio-Modulation-and-LoRa"><a href="#Radio-Modulation-and-LoRa" class="headerlink" title="Radio Modulation and LoRa"></a>Radio Modulation and LoRa</h3><blockquote>
-<p>Chirp Spread Spectrum (CSS): a long-range radio-frequency technology for wireless communication that can be leveraged to detect and track the location of people, assets, and devices both inside and outdoors, across large-scale facilities.</p>
+</tbody>
+</table>
+<h3 id="radio-modulation-and-lora">Radio Modulation and LoRa</h3>
+<blockquote>
+<p>Chirp Spread Spectrum (CSS): a long-range radio-frequency technology
+for wireless communication that can be leveraged to detect and track the
+location of people, assets, and devices both inside and outdoors, across
+large-scale facilities.</p>
 </blockquote>
-<p>![image-20240218211820630](/Users/alexander/Library/Application Support/typora-user-images/image-20240218211820630.png)</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240218211820630.png" srcset="/img/loading.gif" lazyload alt="image-20240218211820630">
+<figcaption aria-hidden="true">image-20240218211820630</figcaption>
+</figure>
 <ul>
-<li>Spreading Factor (SF): with the increase of the SF, the processing gain will increase, resulting in an increase in sensitivity <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> increase in link budget &amp; time on air.</li>
-<li>Orthogonality: transmission of multiple signals that are both on the same channel frequency and in the same time slot.</li>
+<li>Spreading Factor (SF): with the increase of the SF, the processing
+gain will increase, resulting in an increase in sensitivity <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container></span> increase in link budget &amp;
+time on air.</li>
+<li>Orthogonality: transmission of multiple signals that are both on the
+same channel frequency and in the same time slot.</li>
 </ul>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="LoRaWAN-Network-Fundamentals"><a href="#LoRaWAN-Network-Fundamentals" class="headerlink" title="LoRaWAN Network Fundamentals"></a>LoRaWAN Network Fundamentals</h3><p>![image-20240219013129359](/Users/alexander/Library/Application Support/typora-user-images/image-20240219013129359.png)</p>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>![image-20240219013447790](/Users/alexander/Library/Application Support/typora-user-images/image-20240219013447790.png)</p>
-<h5 id="End-Device"><a href="#End-Device" class="headerlink" title="End Device"></a><strong>End Device</strong></h5><p> A sensor or an actuator is wirelessly connected to a LoRaWAN network through radio gateways using LoRa modulation.</p>
+<h4 id="section"></h4>
+<h3 id="lorawan-network-fundamentals">LoRaWAN Network Fundamentals</h3>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219013129359.png" srcset="/img/loading.gif" lazyload alt="image-20240219013129359">
+<figcaption aria-hidden="true">image-20240219013129359</figcaption>
+</figure>
+<h4 id="introduction">Introduction</h4>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219013447790.png" srcset="/img/loading.gif" lazyload alt="image-20240219013447790">
+<figcaption aria-hidden="true">image-20240219013447790</figcaption>
+</figure>
+<h5 id="end-device"><strong>End Device</strong></h5>
+<p>A sensor or an actuator is wirelessly connected to a LoRaWAN network
+through radio gateways using LoRa modulation.</p>
 <ul>
-<li>Examples: street lighting, wireless locks, water valve shut off, leak prevention.</li>
-<li>Several unique identifiers were assigned during the manufacture.<ul>
-<li>Identifiers are used to securely activate and administer the device to ensure the safe transport of packets over a private or public network and to deliver encrypted data to the Cloud.</li>
+<li>Examples: street lighting, wireless locks, water valve shut off,
+leak prevention.</li>
+<li>Several unique identifiers were assigned during the manufacture.
+<ul>
+<li>Identifiers are used to securely activate and administer the device
+to ensure the safe transport of packets over a private or public network
+and to deliver encrypted data to the Cloud.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p>![image-20240219181813957](/Users/alexander/Library/Application Support/typora-user-images/image-20240219181813957.png)</p>
-<h5 id="Gateway"><a href="#Gateway" class="headerlink" title="Gateway"></a><strong>Gateway</strong></h5><p>Receives LoRa-modulated RF messages from any end device in hearing distance and forwards these data messages to the LoRaWAN network server (LNS), connected through an IP backbone.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219181813957.png" srcset="/img/loading.gif" lazyload alt="image-20240219181813957">
+<figcaption aria-hidden="true">image-20240219181813957</figcaption>
+</figure>
+<h5 id="gateway"><strong>Gateway</strong></h5>
+<p>Receives LoRa-modulated RF messages from any end device in hearing
+distance and forwards these data messages to the LoRaWAN network server
+(LNS), connected through an IP backbone.</p>
 <ul>
 <li>The same sensor can be served by multiple gateways in the area.</li>
-<li>Each uplink packet sent by the end device will be received by all gateways within reach.</li>
+<li>Each uplink packet sent by the end device will be received by all
+gateways within reach.</li>
 </ul>
-<p>![image-20240219181831807](/Users/alexander/Library/Application Support/typora-user-images/image-20240219181831807.png)</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219181831807.png" srcset="/img/loading.gif" lazyload alt="image-20240219181831807">
+<figcaption aria-hidden="true">image-20240219181831807</figcaption>
+</figure>
 <p>IP traffic from a gateway to the network server:</p>
 <ul>
 <li>Wi-Fi</li>
 <li>hardwired Ethernet</li>
 <li>Cellular</li>
 </ul>
-<p>LoRaWAN gateways perform at the physical layer like LoRa radio message forwarders.</p>
+<p>LoRaWAN gateways perform at the physical layer like LoRa radio
+message forwarders.</p>
 <ul>
-<li>Uplinks: Only check the data integrity of each incoming LoRa RF message. Check the CRC to see if the integrity is intact or not.<ul>
+<li>Uplinks: Only check the data integrity of each incoming LoRa RF
+message. Check the CRC to see if the integrity is intact or not.
+<ul>
 <li>If incorrect, the message will be dropped.</li>
-<li>If correct, the message will be forwarded to the LNS with metadata (receive the RSSI level of the message and optional timestamp).</li>
-</ul>
-</li>
-<li>Downlinks: Execute transmission requests from LNS without interpretation of the payload.<ul>
+<li>If correct, the message will be forwarded to the LNS with metadata
+(receive the RSSI level of the message and optional timestamp).</li>
+</ul></li>
+<li>Downlinks: Execute transmission requests from LNS without
+interpretation of the payload.
+<ul>
 <li>LNS performs the data de-duplication and copy deletion.</li>
-<li>LNS selects the transmission gateway (the one that is the closest to the target end device) based on the RSSI level of the identical messages.</li>
+<li>LNS selects the transmission gateway (the one that is the closest to
+the target end device) based on the RSSI level of the identical
+messages.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p>![image-20240219184305654](/Users/alexander/Library/Application Support/typora-user-images/image-20240219184305654.png)</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240219184305654.png" srcset="/img/loading.gif" lazyload alt="image-20240219184305654">
+<figcaption aria-hidden="true">image-20240219184305654</figcaption>
+</figure>
 <p>There are three types of channel gateways in North America.</p>
 <ul>
 <li>8-channel: least expensive.</li>
 <li>8- and 16-channel: for both indoor and outdoor use.</li>
-<li>64-channel: only available in a carrier-grade variant (intended for deployment in places such as cell towers, or the rooftops of very tall buildings).</li>
+<li>64-channel: only available in a carrier-grade variant (intended for
+deployment in places such as cell towers, or the rooftops of very tall
+buildings).</li>
 </ul>
-<h5 id="Network-Servers"><a href="#Network-Servers" class="headerlink" title="Network Servers"></a><strong>Network Server</strong>s</h5><p>The LNS establishes secure 128-bit AES connections</p>
+<h5 id="network-servers"><strong>Network Server</strong>s</h5>
+<p>The LNS establishes secure 128-bit AES connections</p>
 <ul>
-<li><strong>Transport of the end-to-end data</strong>: end-device <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> User Application in the Cloud </li>
-<li><strong>Control of traffic</strong>: end-device <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container>​ LNS</li>
+<li><strong>Transport of the end-to-end data</strong>: end-device <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container></span> User Application in the
+Cloud</li>
+<li><strong>Control of traffic</strong>: end-device <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container></span>​ LNS</li>
 </ul>
-<p>Also ensures the <strong><u>authenticity</u></strong> of every sensor on the network and the <strong><u>integrity</u></strong> of every message. The network server cannot see or access the application data.</p>
-<p>![image-20240220004322448](/Users/alexander/Library/Application Support/typora-user-images/image-20240220004322448.png)</p>
+<p>Also ensures the <strong><u>authenticity</u></strong> of every sensor
+on the network and the <strong><u>integrity</u></strong> of every
+message. The network server cannot see or access the application
+data.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220004322448.png" srcset="/img/loading.gif" lazyload alt="image-20240220004322448">
+<figcaption aria-hidden="true">image-20240220004322448</figcaption>
+</figure>
 <p>Features:</p>
 <ul>
 <li>Device address checking</li>
@@ -508,24 +611,40 @@ mjx-container[display="true"] + br {
 <li>Acknowledgements of received messages</li>
 <li>Adapting data rates using the ADR protocol</li>
 <li>Responding to all MAC layer requests coming from the device</li>
-<li>Forwarding uplink application payloads to the appropriate application servers</li>
-<li>Queueing of downlink payloads coming from any Application Server to any device connected to the network</li>
-<li>Forwarding Join-request and join-accept messages between the devices and the join server</li>
+<li>Forwarding uplink application payloads to the appropriate
+application servers</li>
+<li>Queueing of downlink payloads coming from any Application Server to
+any device connected to the network</li>
+<li>Forwarding Join-request and join-accept messages between the devices
+and the join server</li>
 </ul>
-<h5 id="Application-Servers"><a href="#Application-Servers" class="headerlink" title="Application Servers"></a>Application Servers</h5><p>Responsible for securely handling, managing, and interpreting sensor application data. </p>
-<p>Also, generate all the application-layer downlink payloads to the connected end devices.</p>
-<p>![image-20240220004626050](/Users/alexander/Library/Application Support/typora-user-images/image-20240220004626050.png)</p>
-<h5 id="Join-Server"><a href="#Join-Server" class="headerlink" title="Join Server"></a>Join Server</h5><ul>
-<li><p>Manages the <u><strong>over-the-air</strong></u> activation process for end devices to be added to the network.</p>
-</li>
-<li><p>Contains the information required to process uplink <strong><u>join-request</u></strong> frames and generate the downlink <strong><u>join-accept</u></strong> frames.</p>
-</li>
-<li><p>Signals to the network server which application server should be connected to the end-device, and performs the network and application session encryption key derivations.</p>
-</li>
-<li><p>Communicates the Network Session Key of the device to the network server, and the Application Session Key to the corresponding application server.</p>
-</li>
+<h5 id="application-servers">Application Servers</h5>
+<p>Responsible for securely handling, managing, and interpreting sensor
+application data.</p>
+<p>Also, generate all the application-layer downlink payloads to the
+connected end devices.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220004626050.png" srcset="/img/loading.gif" lazyload alt="image-20240220004626050">
+<figcaption aria-hidden="true">image-20240220004626050</figcaption>
+</figure>
+<h5 id="join-server">Join Server</h5>
+<ul>
+<li><p>Manages the <u><strong>over-the-air</strong></u> activation
+process for end devices to be added to the network.</p></li>
+<li><p>Contains the information required to process uplink
+<strong><u>join-request</u></strong> frames and generate the downlink
+<strong><u>join-accept</u></strong> frames.</p></li>
+<li><p>Signals to the network server which application server should be
+connected to the end-device, and performs the network and application
+session encryption key derivations.</p></li>
+<li><p>Communicates the Network Session Key of the device to the network
+server, and the Application Session Key to the corresponding application
+server.</p></li>
 </ul>
-<p>![image-20240220005916368](/Users/alexander/Library/Application Support/typora-user-images/image-20240220005916368.png)</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220005916368.png" srcset="/img/loading.gif" lazyload alt="image-20240220005916368">
+<figcaption aria-hidden="true">image-20240220005916368</figcaption>
+</figure>
 <p>Information contained in the join server for end-device control:</p>
 <ul>
 <li>DevEUI (end-device serial unique identifier)</li>
@@ -534,24 +653,44 @@ mjx-container[display="true"] + br {
 <li>Application Server Identifier</li>
 <li>End-device Service Profile</li>
 </ul>
-<h4 id="Device-Commissioning"><a href="#Device-Commissioning" class="headerlink" title="Device Commissioning"></a>Device Commissioning</h4><p>Devices must be commissioned and activated on the network at the start of operation (align each device and the network with respect to parameters like identifiers/encryption keys/server locations).</p>
-<p>There are two activation types: Over-the-air Activation (OTAA) and Activation by Personalization (ABP).</p>
+<h4 id="device-commissioning">Device Commissioning</h4>
+<p>Devices must be commissioned and activated on the network at the
+start of operation (align each device and the network with respect to
+parameters like identifiers/encryption keys/server locations).</p>
+<p>There are two activation types: Over-the-air Activation (OTAA) and
+Activation by Personalization (ABP).</p>
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>OTAA (Preferred)</th>
 <th>ABP</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>- Device manufacturers autonomously generate essential provisioning parameters <br>- Secure keys (session-long and derived) can be renewed regularly <br>- Devices  can store multiple “identities” to dynamically and securely switch networks and operations during their lifetime<br>- High-grade, tamper-proof security options are available</td>
-<td>- A simplified (less secure) commissioning process<br>- IDs and Keys are personalized at fabrication<br>- Devices become immediately functional upon powering up; the Join procedure is skipped<br>- Devices are tied to a specific network/service; the NetID is a portion of the device network address</td>
+<tbody>
+<tr class="odd">
+<td>- Device manufacturers autonomously generate essential provisioning
+parameters <br>- Secure keys (session-long and derived) can be renewed
+regularly <br>- Devices can store multiple "identities" to dynamically
+and securely switch networks and operations during their lifetime<br>-
+High-grade, tamper-proof security options are available</td>
+<td>- A simplified (less secure) commissioning process<br>- IDs and
+Keys are personalized at fabrication<br>- Devices become immediately
+functional upon powering up; the Join procedure is skipped<br>-
+Devices are tied to a specific network/service; the NetID is a portion
+of the device network address</td>
 </tr>
-</tbody></table>
-<h4 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h4><p>Two key elements to the security of a LoRaWAN network:</p>
+</tbody>
+</table>
+<h4 id="security">Security</h4>
+<p>Two key elements to the security of a LoRaWAN network:</p>
 <ul>
-<li><strong>Join Procedure</strong>: Establish mutual authentication between an end device and the LoRaWAN network to which it is connected.</li>
-<li><strong>Message Authentication</strong>: LoRaWAN MAC and application messages are origin-authenticated, integrity-protected, and encrypted end-to-end (i.e. end-device <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container>​ application server)</li>
+<li><strong>Join Procedure</strong>: Establish mutual authentication
+between an end device and the LoRaWAN network to which it is
+connected.</li>
+<li><strong>Message Authentication</strong>: LoRaWAN MAC and application
+messages are origin-authenticated, integrity-protected, and encrypted
+end-to-end (i.e. end-device <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container></span>​ application server)</li>
 </ul>
 <p>Key features:</p>
 <ul>
@@ -560,97 +699,161 @@ mjx-container[display="true"] + br {
 <li>No eavesdropping</li>
 <li>No network traffic capture/replay</li>
 </ul>
-<h5 id="Join-Procedure"><a href="#Join-Procedure" class="headerlink" title="Join Procedure"></a>Join Procedure</h5><p>Security keys:</p>
+<h5 id="join-procedure">Join Procedure</h5>
+<p>Security keys:</p>
 <ul>
 <li><strong>End-device</strong>: Individual root keys</li>
 <li><strong>Join Server</strong>: Matching keys</li>
 </ul>
-<p>![image-20240220190919788](/Users/alexander/Library/Application Support/typora-user-images/image-20240220190919788.png)</p>
-<ol>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220190919788.png" srcset="/img/loading.gif" lazyload alt="image-20240220190919788">
+<figcaption aria-hidden="true">image-20240220190919788</figcaption>
+</figure>
+<ol type="1">
 <li><p><strong>Join Request</strong></p>
-<p>A <u>join request</u> message is sent by end-device to the join server.</p>
-<p>![image-20240220191303482](/Users/alexander/Library/Application Support/typora-user-images/image-20240220191303482.png)</p>
-</li>
+<p>A <u>join request</u> message is sent by end-device to the join
+server.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220191303482.png" srcset="/img/loading.gif" lazyload alt="image-20240220191303482">
+<figcaption aria-hidden="true">image-20240220191303482</figcaption>
+</figure></li>
 <li><p><strong>Join Accept</strong></p>
-<p>Request authenticated by the join server, then a <u>join accept</u> message returned to the device.</p>
-<p>![image-20240220191521393](/Users/alexander/Library/Application Support/typora-user-images/image-20240220191521393.png)</p>
-</li>
+<p>Request authenticated by the join server, then a <u>join accept</u>
+message returned to the device.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220191521393.png" srcset="/img/loading.gif" lazyload alt="image-20240220191521393">
+<figcaption aria-hidden="true">image-20240220191521393</figcaption>
+</figure></li>
 <li><p><strong>Session Key Derivation</strong></p>
 <ul>
-<li>End-deive: Locally derives session keys, based on the ( DevEUI / Join EUI / DevNonce / root keys / fields in the join request / join accept messages).<ul>
-<li>what’s the specific algorithm?</li>
+<li>End-deive: Locally derives session keys, based on the ( DevEUI /
+Join EUI / DevNonce / root keys / fields in the join request / join
+accept messages).
+<ul>
+<li>what's the specific algorithm?</li>
+</ul></li>
+<li>Join Server: Derive session keys from (serial IDs / root keys /
+fields in join requests / join accept messages)</li>
 </ul>
-</li>
-<li>Join Server: Derive session keys from (serial IDs / root keys / fields in join requests / join accept messages)</li>
-</ul>
-<p>Join server shares session keys with network and application servers.</p>
-<p>![image-20240220192044853](/Users/alexander/Library/Application Support/typora-user-images/image-20240220192044853.png)</p>
-</li>
+<p>Join server shares session keys with network and application
+servers.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220192044853.png" srcset="/img/loading.gif" lazyload alt="image-20240220192044853">
+<figcaption aria-hidden="true">image-20240220192044853</figcaption>
+</figure></li>
 <li><p>Data Packet Security</p>
 <ul>
-<li>NwkSKey: a 128-bit AES Network Session Key (end-device <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container> LNS)</li>
-<li>AppSKey: a 128-bit Application Session Key (end-device <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container> application server)</li>
+<li>NwkSKey: a 128-bit AES Network Session Key (end-device <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container></span> LNS)</li>
+<li>AppSKey: a 128-bit Application Session Key (end-device <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2194" d="M263 479Q267 501 271 506T288 511Q308 511 308 500Q308 493 303 475Q293 438 278 406T246 352T215 315T185 287T165 270H835Q729 349 696 475Q691 493 691 500Q691 511 711 511Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H165Q167 228 182 216T211 189T244 152T277 96T303 25Q308 7 308 0Q308 -11 288 -11Q281 -11 278 -11T272 -7T267 2T263 21Q245 94 195 151T73 236Q58 242 55 247Q55 254 59 257T73 264Q144 292 194 349T263 479Z"></path></g></g></g></svg></mjx-container></span> application server)</li>
 </ul>
 <p>Gateway or the network server cannot read the user data.</p>
-<p>![image-20240220192527444](/Users/alexander/Library/Application Support/typora-user-images/image-20240220192527444.png)</p>
-</li>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220192527444.png" srcset="/img/loading.gif" lazyload alt="image-20240220192527444">
+<figcaption aria-hidden="true">image-20240220192527444</figcaption>
+</figure></li>
 </ol>
-<h4 id="Device-Classes-A-B-and-C"><a href="#Device-Classes-A-B-and-C" class="headerlink" title="Device Classes: A, B and C"></a>Device Classes: A, B and C</h4><ul>
+<h4 id="device-classes-a-b-and-c">Device Classes: A, B and C</h4>
+<ul>
 <li>Class A: supported by all devices</li>
 <li>Class B: support both Class A and Class B modes</li>
 <li>Class C: support all three modes of operation</li>
 </ul>
-<h5 id="Class-A-Devices"><a href="#Class-A-Devices" class="headerlink" title="Class A Devices"></a>Class A Devices</h5><p>![image-20240220200910912](/Users/alexander/Library/Application Support/typora-user-images/image-20240220200910912.png)</p>
-<p>End-device mostly stays in an idle state (sleep mode). It wakes up and initiates an uplink when there is a change in the monitored target, transmitting the data about the changed state back to the network (Tx).</p>
+<h5 id="class-a-devices">Class A Devices</h5>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220200910912.png" srcset="/img/loading.gif" lazyload alt="image-20240220200910912">
+<figcaption aria-hidden="true">image-20240220200910912</figcaption>
+</figure>
+<p>End-device mostly stays in an idle state (sleep mode). It wakes up
+and initiates an uplink when there is a change in the monitored target,
+transmitting the data about the changed state back to the network
+(Tx).</p>
 <p>Then waiting for the network response (typically 1 second).</p>
 <ul>
-<li>Doesn’t receive a downlink during the <strong><u>receive window</u></strong> (Rx1)<ul>
+<li>Doesn't receive a downlink during the <strong><u>receive
+window</u></strong> (Rx1)
+<ul>
 <li>Briefly goes back to sleep</li>
 <li>Waking a moment later, and listening for a response (Rx2)</li>
-</ul>
-</li>
-<li>No response received during the second Rx window<ul>
+</ul></li>
+<li>No response received during the second Rx window
+<ul>
 <li>Goes back to sleep until next data report</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="47.407ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 20954 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext"><path data-c="44" d="M130 622Q123 629 119 631T103 634T60 637H27V683H228Q399 682 419 682T461 676Q504 667 546 641T626 573T685 470T708 336Q708 210 634 116T442 3Q429 1 228 0H27V46H60Q102 47 111 49T130 61V622ZM593 338Q593 439 571 501T493 602Q439 637 355 637H322H294Q238 637 234 628Q231 624 231 344Q231 62 232 59Q233 49 248 48T339 46H350Q456 46 515 95Q561 133 577 191T593 338Z"></path><path data-c="65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z" transform="translate(764,0)"></path><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z" transform="translate(1208,0)"></path><path data-c="61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z" transform="translate(1486,0)"></path><path data-c="79" d="M69 -66Q91 -66 104 -80T118 -116Q118 -134 109 -145T91 -160Q84 -163 97 -166Q104 -168 111 -168Q131 -168 148 -159T175 -138T197 -106T213 -75T225 -43L242 0L170 183Q150 233 125 297Q101 358 96 368T80 381Q79 382 78 382Q66 385 34 385H19V431H26L46 430Q65 430 88 429T122 428Q129 428 142 428T171 429T200 430T224 430L233 431H241V385H232Q183 385 185 366L286 112Q286 113 332 227L376 341V350Q376 365 366 373T348 383T334 385H331V431H337H344Q351 431 361 431T382 430T405 429T422 429Q477 429 503 431H508V385H497Q441 380 422 345Q420 343 378 235T289 9T227 -131Q180 -204 113 -204Q69 -204 44 -177T19 -116Q19 -89 35 -78T69 -66Z" transform="translate(1986,0)"></path><path data-c="20" d="" transform="translate(2514,0)"></path><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" transform="translate(2764,0)"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(3153,0)"></path><path data-c="66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z" transform="translate(3653,0)"></path><path data-c="20" d="" transform="translate(3959,0)"></path><path data-c="65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z" transform="translate(4209,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(4653,0)"></path><path data-c="64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z" transform="translate(5209,0)"></path><path data-c="20" d="" transform="translate(5765,0)"></path><path data-c="75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z" transform="translate(6015,0)"></path><path data-c="70" d="M36 -148H50Q89 -148 97 -134V-126Q97 -119 97 -107T97 -77T98 -38T98 6T98 55T98 106Q98 140 98 177T98 243T98 296T97 335T97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 61 434T98 436Q115 437 135 438T165 441T176 442H179V416L180 390L188 397Q247 441 326 441Q407 441 464 377T522 216Q522 115 457 52T310 -11Q242 -11 190 33L182 40V-45V-101Q182 -128 184 -134T195 -145Q216 -148 244 -148H260V-194H252L228 -193Q205 -192 178 -192T140 -191Q37 -191 28 -194H20V-148H36ZM424 218Q424 292 390 347T305 402Q234 402 182 337V98Q222 26 294 26Q345 26 384 80T424 218Z" transform="translate(6571,0)"></path><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z" transform="translate(7127,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(7405,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(7683,0)"></path><path data-c="6B" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T97 124T98 167T98 217T98 272T98 329Q98 366 98 407T98 482T98 542T97 586T97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V463L180 233L240 287Q300 341 304 347Q310 356 310 364Q310 383 289 385H284V431H293Q308 428 412 428Q475 428 484 431H489V385H476Q407 380 360 341Q286 278 286 274Q286 273 349 181T420 79Q434 60 451 53T500 46H511V0H505Q496 3 418 3Q322 3 307 0H299V46H306Q330 48 330 65Q330 72 326 79Q323 84 276 153T228 222L176 176V120V84Q176 65 178 59T189 49Q210 46 238 46H254V0H246Q231 3 137 3T28 0H20V46H36Z" transform="translate(8239,0)"></path><path data-c="20" d="" transform="translate(8767,0)"></path><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z" transform="translate(9017,0)"></path><path data-c="72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z" transform="translate(9406,0)"></path><path data-c="61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z" transform="translate(9798,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(10298,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(10854,0)"></path><path data-c="6D" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q351 442 364 440T387 434T406 426T421 417T432 406T441 395T448 384T452 374T455 366L457 361L460 365Q463 369 466 373T475 384T488 397T503 410T523 422T546 432T572 439T603 442Q729 442 740 329Q741 322 741 190V104Q741 66 743 59T754 49Q775 46 803 46H819V0H811L788 1Q764 2 737 2T699 3Q596 3 587 0H579V46H595Q656 46 656 62Q657 64 657 200Q656 335 655 343Q649 371 635 385T611 402T585 404Q540 404 506 370Q479 343 472 315T464 232V168V108Q464 78 465 68T468 55T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(11248,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(12081,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(12359,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(12753,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(13147,0)"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(13425,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(13925,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(14481,0)"></path></g><g data-mml-node="mo" transform="translate(15147.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mtext" transform="translate(16203.6,0)"><path data-c="52" d="M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z"></path><path data-c="78" d="M201 0Q189 3 102 3Q26 3 17 0H11V46H25Q48 47 67 52T96 61T121 78T139 96T160 122T180 150L226 210L168 288Q159 301 149 315T133 336T122 351T113 363T107 370T100 376T94 379T88 381T80 383Q74 383 44 385H16V431H23Q59 429 126 429Q219 429 229 431H237V385Q201 381 201 369Q201 367 211 353T239 315T268 274L272 270L297 304Q329 345 329 358Q329 364 327 369T322 376T317 380T310 384L307 385H302V431H309Q324 428 408 428Q487 428 493 431H499V385H492Q443 385 411 368Q394 360 377 341T312 257L296 236L358 151Q424 61 429 57T446 50Q464 46 499 46H516V0H510H502Q494 1 482 1T457 2T432 2T414 3Q403 3 377 3T327 1L304 0H295V46H298Q309 46 320 51T331 63Q331 65 291 120L250 175Q249 174 219 133T185 88Q181 83 181 74Q181 63 188 55T206 46Q208 46 208 23V0H201Z" transform="translate(736,0)"></path></g><g data-mml-node="mn" transform="translate(17467.6,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(18189.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mtext" transform="translate(19190,0)"><path data-c="52" d="M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z"></path><path data-c="78" d="M201 0Q189 3 102 3Q26 3 17 0H11V46H25Q48 47 67 52T96 61T121 78T139 96T160 122T180 150L226 210L168 288Q159 301 149 315T133 336T122 351T113 363T107 370T100 376T94 379T88 381T80 383Q74 383 44 385H16V431H23Q59 429 126 429Q219 429 229 431H237V385Q201 381 201 369Q201 367 211 353T239 315T268 274L272 270L297 304Q329 345 329 358Q329 364 327 369T322 376T317 380T310 384L307 385H302V431H309Q324 428 408 428Q487 428 493 431H499V385H492Q443 385 411 368Q394 360 377 341T312 257L296 236L358 151Q424 61 429 57T446 50Q464 46 499 46H516V0H510H502Q494 1 482 1T457 2T432 2T414 3Q403 3 377 3T327 1L304 0H295V46H298Q309 46 320 51T331 63Q331 65 291 120L250 175Q249 174 219 133T185 88Q181 83 181 74Q181 63 188 55T206 46Q208 46 208 23V0H201Z" transform="translate(736,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1264,0)"></path></g></g></g></svg></mjx-container></p>
+<p><span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="47.407ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 20954 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext"><path data-c="44" d="M130 622Q123 629 119 631T103 634T60 637H27V683H228Q399 682 419 682T461 676Q504 667 546 641T626 573T685 470T708 336Q708 210 634 116T442 3Q429 1 228 0H27V46H60Q102 47 111 49T130 61V622ZM593 338Q593 439 571 501T493 602Q439 637 355 637H322H294Q238 637 234 628Q231 624 231 344Q231 62 232 59Q233 49 248 48T339 46H350Q456 46 515 95Q561 133 577 191T593 338Z"></path><path data-c="65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z" transform="translate(764,0)"></path><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z" transform="translate(1208,0)"></path><path data-c="61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z" transform="translate(1486,0)"></path><path data-c="79" d="M69 -66Q91 -66 104 -80T118 -116Q118 -134 109 -145T91 -160Q84 -163 97 -166Q104 -168 111 -168Q131 -168 148 -159T175 -138T197 -106T213 -75T225 -43L242 0L170 183Q150 233 125 297Q101 358 96 368T80 381Q79 382 78 382Q66 385 34 385H19V431H26L46 430Q65 430 88 429T122 428Q129 428 142 428T171 429T200 430T224 430L233 431H241V385H232Q183 385 185 366L286 112Q286 113 332 227L376 341V350Q376 365 366 373T348 383T334 385H331V431H337H344Q351 431 361 431T382 430T405 429T422 429Q477 429 503 431H508V385H497Q441 380 422 345Q420 343 378 235T289 9T227 -131Q180 -204 113 -204Q69 -204 44 -177T19 -116Q19 -89 35 -78T69 -66Z" transform="translate(1986,0)"></path><path data-c="20" d="" transform="translate(2514,0)"></path><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" transform="translate(2764,0)"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(3153,0)"></path><path data-c="66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z" transform="translate(3653,0)"></path><path data-c="20" d="" transform="translate(3959,0)"></path><path data-c="65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z" transform="translate(4209,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(4653,0)"></path><path data-c="64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z" transform="translate(5209,0)"></path><path data-c="20" d="" transform="translate(5765,0)"></path><path data-c="75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z" transform="translate(6015,0)"></path><path data-c="70" d="M36 -148H50Q89 -148 97 -134V-126Q97 -119 97 -107T97 -77T98 -38T98 6T98 55T98 106Q98 140 98 177T98 243T98 296T97 335T97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 61 434T98 436Q115 437 135 438T165 441T176 442H179V416L180 390L188 397Q247 441 326 441Q407 441 464 377T522 216Q522 115 457 52T310 -11Q242 -11 190 33L182 40V-45V-101Q182 -128 184 -134T195 -145Q216 -148 244 -148H260V-194H252L228 -193Q205 -192 178 -192T140 -191Q37 -191 28 -194H20V-148H36ZM424 218Q424 292 390 347T305 402Q234 402 182 337V98Q222 26 294 26Q345 26 384 80T424 218Z" transform="translate(6571,0)"></path><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z" transform="translate(7127,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(7405,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(7683,0)"></path><path data-c="6B" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T97 124T98 167T98 217T98 272T98 329Q98 366 98 407T98 482T98 542T97 586T97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V463L180 233L240 287Q300 341 304 347Q310 356 310 364Q310 383 289 385H284V431H293Q308 428 412 428Q475 428 484 431H489V385H476Q407 380 360 341Q286 278 286 274Q286 273 349 181T420 79Q434 60 451 53T500 46H511V0H505Q496 3 418 3Q322 3 307 0H299V46H306Q330 48 330 65Q330 72 326 79Q323 84 276 153T228 222L176 176V120V84Q176 65 178 59T189 49Q210 46 238 46H254V0H246Q231 3 137 3T28 0H20V46H36Z" transform="translate(8239,0)"></path><path data-c="20" d="" transform="translate(8767,0)"></path><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z" transform="translate(9017,0)"></path><path data-c="72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z" transform="translate(9406,0)"></path><path data-c="61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z" transform="translate(9798,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(10298,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(10854,0)"></path><path data-c="6D" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q351 442 364 440T387 434T406 426T421 417T432 406T441 395T448 384T452 374T455 366L457 361L460 365Q463 369 466 373T475 384T488 397T503 410T523 422T546 432T572 439T603 442Q729 442 740 329Q741 322 741 190V104Q741 66 743 59T754 49Q775 46 803 46H819V0H811L788 1Q764 2 737 2T699 3Q596 3 587 0H579V46H595Q656 46 656 62Q657 64 657 200Q656 335 655 343Q649 371 635 385T611 402T585 404Q540 404 506 370Q479 343 472 315T464 232V168V108Q464 78 465 68T468 55T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(11248,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(12081,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(12359,0)"></path><path data-c="73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z" transform="translate(12753,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(13147,0)"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(13425,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(13925,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(14481,0)"></path></g><g data-mml-node="mo" transform="translate(15147.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mtext" transform="translate(16203.6,0)"><path data-c="52" d="M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z"></path><path data-c="78" d="M201 0Q189 3 102 3Q26 3 17 0H11V46H25Q48 47 67 52T96 61T121 78T139 96T160 122T180 150L226 210L168 288Q159 301 149 315T133 336T122 351T113 363T107 370T100 376T94 379T88 381T80 383Q74 383 44 385H16V431H23Q59 429 126 429Q219 429 229 431H237V385Q201 381 201 369Q201 367 211 353T239 315T268 274L272 270L297 304Q329 345 329 358Q329 364 327 369T322 376T317 380T310 384L307 385H302V431H309Q324 428 408 428Q487 428 493 431H499V385H492Q443 385 411 368Q394 360 377 341T312 257L296 236L358 151Q424 61 429 57T446 50Q464 46 499 46H516V0H510H502Q494 1 482 1T457 2T432 2T414 3Q403 3 377 3T327 1L304 0H295V46H298Q309 46 320 51T331 63Q331 65 291 120L250 175Q249 174 219 133T185 88Q181 83 181 74Q181 63 188 55T206 46Q208 46 208 23V0H201Z" transform="translate(736,0)"></path></g><g data-mml-node="mn" transform="translate(17467.6,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(18189.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mtext" transform="translate(19190,0)"><path data-c="52" d="M130 622Q123 629 119 631T103 634T60 637H27V683H202H236H300Q376 683 417 677T500 648Q595 600 609 517Q610 512 610 501Q610 468 594 439T556 392T511 361T472 343L456 338Q459 335 467 332Q497 316 516 298T545 254T559 211T568 155T578 94Q588 46 602 31T640 16H645Q660 16 674 32T692 87Q692 98 696 101T712 105T728 103T732 90Q732 59 716 27T672 -16Q656 -22 630 -22Q481 -16 458 90Q456 101 456 163T449 246Q430 304 373 320L363 322L297 323H231V192L232 61Q238 51 249 49T301 46H334V0H323Q302 3 181 3Q59 3 38 0H27V46H60Q102 47 111 49T130 61V622ZM491 499V509Q491 527 490 539T481 570T462 601T424 623T362 636Q360 636 340 636T304 637H283Q238 637 234 628Q231 624 231 492V360H289Q390 360 434 378T489 456Q491 467 491 499Z"></path><path data-c="78" d="M201 0Q189 3 102 3Q26 3 17 0H11V46H25Q48 47 67 52T96 61T121 78T139 96T160 122T180 150L226 210L168 288Q159 301 149 315T133 336T122 351T113 363T107 370T100 376T94 379T88 381T80 383Q74 383 44 385H16V431H23Q59 429 126 429Q219 429 229 431H237V385Q201 381 201 369Q201 367 211 353T239 315T268 274L272 270L297 304Q329 345 329 358Q329 364 327 369T322 376T317 380T310 384L307 385H302V431H309Q324 428 408 428Q487 428 493 431H499V385H492Q443 385 411 368Q394 360 377 341T312 257L296 236L358 151Q424 61 429 57T446 50Q464 46 499 46H516V0H510H502Q494 1 482 1T457 2T432 2T414 3Q403 3 377 3T327 1L304 0H295V46H298Q309 46 320 51T331 63Q331 65 291 120L250 175Q249 174 219 133T185 88Q181 83 181 74Q181 63 188 55T206 46Q208 46 208 23V0H201Z" transform="translate(736,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1264,0)"></path></g></g></g></svg></mjx-container></span></p>
 <blockquote>
 <p>Class A device cannot be waken up by the application.</p>
 </blockquote>
-<p>![image-20240220200924446](/Users/alexander/Library/Application Support/typora-user-images/image-20240220200924446.png)</p>
-<p>A device will nor try to send another uplink message until either:</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220200924446.png" srcset="/img/loading.gif" lazyload alt="image-20240220200924446">
+<figcaption aria-hidden="true">image-20240220200924446</figcaption>
+</figure>
+<p>A device will nor try to send another uplink message until
+either:</p>
 <ul>
 <li>It has received a downlink message during Rx1</li>
-<li>The second receive window following the last tranmission is complete</li>
+<li>The second receive window following the last tranmission is
+complete</li>
 </ul>
-<h5 id="Class-B-Devices"><a href="#Class-B-Devices" class="headerlink" title="Class B Devices"></a>Class B Devices</h5><p>An enhancement of Class A, offering regularly-scheduled, fixed-time opportunities for an end device to receive downlink from the network. Making it suitable for</p>
+<h5 id="class-b-devices">Class B Devices</h5>
+<p>An enhancement of Class A, offering regularly-scheduled, fixed-time
+opportunities for an end device to receive downlink from the network.
+Making it suitable for</p>
 <ul>
 <li>monitoring sensors</li>
 <li>actuators</li>
 </ul>
-<p>All LoRa-based end-devices start in Class A mode, but programmed Class B device may be switched to Class B mode by the application layer.</p>
-<p>Apart from opening a receive window in Class A mode, Class B end-devices provide <strong>regularly-scheduled receive windows</strong>.</p>
-<h6 id="1-1-1-1-Class-B-Beacons"><a href="#1-1-1-1-Class-B-Beacons" class="headerlink" title="1.1.1.1 Class B Beacons"></a>1.1.1.1 Class B Beacons</h6><p><u><strong>Beaconing</strong></u> process is required for the Class B mode to communicate with the network. </p>
-<p>A time-synchronized beacon will be broadcasted periodically by the network via the gateways, and the end-device must periodically receive one og thses network beacons to align internal timing reference with the network.</p>
-<p>![image-20240220225630534](/Users/alexander/Library/Application Support/typora-user-images/image-20240220225630534.png)</p>
-<p>Not every beacon needs to be processed by the device if it is already aligned.</p>
-<p>![image-20240220225815198](/Users/alexander/Library/Application Support/typora-user-images/image-20240220225815198.png)</p>
-<p>End devices can open receive windows (<strong><u>ping slots</u></strong>) periodically based on the beacon’s timing reference, and these ping slots can be used by the network infrastructure to initiate a downlink communication.</p>
-<p>All LoRaWAN gateways have a built-in GPS timing source to synchronize with the exact beacon timing.</p>
-<p>![image-20240220230346074](/Users/alexander/Library/Application Support/typora-user-images/image-20240220230346074.png)</p>
-<h5 id="Class-C-Devices"><a href="#Class-C-Devices" class="headerlink" title="Class C Devices"></a>Class C Devices</h5><p>Class C are always on devices.</p>
+<p>All LoRa-based end-devices start in Class A mode, but programmed
+Class B device may be switched to Class B mode by the application
+layer.</p>
+<p>Apart from opening a receive window in Class A mode, Class B
+end-devices provide <strong>regularly-scheduled receive
+windows</strong>.</p>
+<h6 id="class-b-beacons">1.1.1.1 Class B Beacons</h6>
+<p><u><strong>Beaconing</strong></u> process is required for the Class B
+mode to communicate with the network.</p>
+<p>A time-synchronized beacon will be broadcasted periodically by the
+network via the gateways, and the end-device must periodically receive
+one og thses network beacons to align internal timing reference with the
+network.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220225630534.png" srcset="/img/loading.gif" lazyload alt="image-20240220225630534">
+<figcaption aria-hidden="true">image-20240220225630534</figcaption>
+</figure>
+<p>Not every beacon needs to be processed by the device if it is already
+aligned.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220225815198.png" srcset="/img/loading.gif" lazyload alt="image-20240220225815198">
+<figcaption aria-hidden="true">image-20240220225815198</figcaption>
+</figure>
+<p>End devices can open receive windows (<strong><u>ping
+slots</u></strong>) periodically based on the beacon's timing reference,
+and these ping slots can be used by the network infrastructure to
+initiate a downlink communication.</p>
+<p>All LoRaWAN gateways have a built-in GPS timing source to synchronize
+with the exact beacon timing.</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220230346074.png" srcset="/img/loading.gif" lazyload alt="image-20240220230346074">
+<figcaption aria-hidden="true">image-20240220230346074</figcaption>
+</figure>
+<h5 id="class-c-devices">Class C Devices</h5>
+<p>Class C are always on devices.</p>
 <blockquote>
 <p>street lights, eletrical meters etc.</p>
 </blockquote>
-<p>It implemented the same two receive windows as Class A device, but do not close Rx2 window until sending the next transmission back to the server.</p>
+<p>It implemented the same two receive windows as Class A device, but do
+not close Rx2 window until sending the next transmission back to the
+server.</p>
 <ul>
-<li><p>Receiving a downlink is always accessible during the Rx2 window.</p>
-</li>
-<li><p>A short window is also available between the end of a transmission and the begining of Rx1.</p>
-</li>
+<li><p>Receiving a downlink is always accessible during the Rx2
+window.</p></li>
+<li><p>A short window is also available between the end of a
+transmission and the begining of Rx1.</p></li>
 </ul>
-<p>![image-20240220231412533](/Users/alexander/Library/Application Support/typora-user-images/image-20240220231412533.png)</p>
+<figure>
+<img src="/Users/alexander/Library/Application%20Support/typora-user-images/image-20240220231412533.png" srcset="/img/loading.gif" lazyload alt="image-20240220231412533">
+<figcaption aria-hidden="true">image-20240220231412533</figcaption>
+</figure>
 
                 
               </div>
@@ -734,9 +937,9 @@ mjx-container[display="true"] + br {
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/01/Fuzzing-A-Survey/" title="Fuzzing: A Survey">
+                      <a href="/2024/03/01/Fuzzing-A-Survey/" title="Fuzzing A Survey">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Fuzzing: A Survey</span>
+                        <span class="hidden-mobile">Fuzzing A Survey</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
