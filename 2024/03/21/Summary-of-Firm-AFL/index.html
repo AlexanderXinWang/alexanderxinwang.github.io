@@ -23,17 +23,21 @@
 <meta property="og:site_name" content="Xin Wang">
 <meta property="og:description" content="The original paper is Firm-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation. 1 Background Discover vulnerabilities in IoT firmware is crucial to mitigate the securi">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220740034.png">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220752145.png">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220854338.png">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220903614.png">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220912873.png">
-<meta property="og:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320221023353.png">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/AFL.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/IoT.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/nbench.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/lmbench.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/Opt1.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/Opt2.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/Opt3.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/Opt4.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/1day.jpeg">
+<meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/crashes.jpeg">
 <meta property="article:published_time" content="2024-03-21T04:55:21.000Z">
-<meta property="article:modified_time" content="2024-03-21T04:57:20.723Z">
+<meta property="article:modified_time" content="2024-03-21T05:19:19.704Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/Users/alexander/Library/Application%20Support/typora-user-images/image-20240320220740034.png">
+<meta name="twitter:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/AFL.jpeg">
   
   
   
@@ -326,7 +330,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          245 words
+          195 words
         
       </span>
     
@@ -337,7 +341,7 @@ mjx-container[display="true"] + br {
         
         
         
-          3 mins
+          2 mins
         
       </span>
     
@@ -605,7 +609,7 @@ mjx-container[display="true"] + br {
 </li>
 </ul>
 <h4 id="4-2-AFL-with-Augmented-Process-Emulation"><a href="#4-2-AFL-with-Augmented-Process-Emulation" class="headerlink" title="4.2 AFL with Augmented Process Emulation"></a>4.2 AFL with Augmented Process Emulation</h4><p>Replace the user-mode QEMU with augmented process emulation in AFL.</p>
-<p>![image-20240318192011808](/Users/alexander/Library/Application Support/typora-user-images/image-20240318192011808.png)</p>
+<p>!<img src="/2024/03/21/Summary-of-Firm-AFL/AFL.jpeg" srcset="/img/loading.gif" lazyload></p>
 <h5 id="Bootstrapping-1"><a href="#Bootstrapping-1" class="headerlink" title="Bootstrapping"></a>Bootstrapping</h5><ul>
 <li><p><code>fork-server</code>(system-mode emulation): boot up the firmware image and launch the program after boot up the system.</p>
 </li>
@@ -618,8 +622,8 @@ mjx-container[display="true"] + br {
 <ul>
 <li>Default fork point: the entry point of the main function.</li>
 <li>This case: vulnerabilities trigger through the network interface<ul>
-<li>hook the network-related ystem calls</li>
-<li>fork point: first invovation of these system calls</li>
+<li>hook the network-related system calls</li>
+<li>fork point: the first invocation of these system calls</li>
 </ul>
 </li>
 </ul>
@@ -655,21 +659,15 @@ mjx-container[display="true"] + br {
 <li>Testing seven IoT programs and the Firmadyne dataset.</li>
 <li>Assessment of the capability to discover 0-day vulnerabilities.</li>
 </ul>
-<h5 id="Transparency"><a href="#Transparency" class="headerlink" title="Transparency"></a>Transparency</h5><p>![image-20240320220705496](/Users/alexander/Library/Application Support/typora-user-images/image-20240320220705496.png)</p>
-<h5 id="Efficiency"><a href="#Efficiency" class="headerlink" title="Efficiency"></a>Efficiency</h5><img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320220740034.png" srcset="/img/loading.gif" lazyload alt="image-20240320220740034" style="zoom:33%;">
-
-<img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320220752145.png" srcset="/img/loading.gif" lazyload alt="image-20240320220752145" style="zoom:33%;">
-
-<h5 id="Effectiveness-of-Optimization"><a href="#Effectiveness-of-Optimization" class="headerlink" title="Effectiveness of Optimization"></a>Effectiveness of Optimization</h5><img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320220854338.png" srcset="/img/loading.gif" lazyload alt="image-20240320220854338" style="zoom:33%;">
-
-<img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320220903614.png" srcset="/img/loading.gif" lazyload alt="image-20240320220903614" style="zoom:33%;">
-
-<img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320220912873.png" srcset="/img/loading.gif" lazyload alt="image-20240320220912873" style="zoom: 33%;">
-
-<img src="/Users/alexander/Library/Application Support/typora-user-images/image-20240320221023353.png" srcset="/img/loading.gif" lazyload alt="image-20240320221023353" style="zoom:33%;">
-
-<h5 id="Vulnerability-Discovery"><a href="#Vulnerability-Discovery" class="headerlink" title="Vulnerability Discovery"></a>Vulnerability Discovery</h5><p>![image-20240320221043133](/Users/alexander/Library/Application Support/typora-user-images/image-20240320221043133.png)</p>
-<p>![image-20240320221103183](/Users/alexander/Library/Application Support/typora-user-images/image-20240320221103183.png)</p>
+<h5 id="Transparency"><a href="#Transparency" class="headerlink" title="Transparency"></a>Transparency</h5><p><img src="/2024/03/21/Summary-of-Firm-AFL/IoT.jpeg" srcset="/img/loading.gif" lazyload></p>
+<h5 id="Efficiency"><a href="#Efficiency" class="headerlink" title="Efficiency"></a>Efficiency</h5><p><img src="/2024/03/21/Summary-of-Firm-AFL/nbench.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2024/03/21/Summary-of-Firm-AFL/lmbench.jpeg" srcset="/img/loading.gif" lazyload></p>
+<h5 id="Effectiveness-of-Optimization"><a href="#Effectiveness-of-Optimization" class="headerlink" title="Effectiveness of Optimization"></a>Effectiveness of Optimization</h5><p><img src="/2024/03/21/Summary-of-Firm-AFL/Opt1.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2024/03/21/Summary-of-Firm-AFL/Opt2.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2024/03/21/Summary-of-Firm-AFL/Opt3.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2024/03/21/Summary-of-Firm-AFL/Opt4.jpeg" srcset="/img/loading.gif" lazyload></p>
+<h5 id="Vulnerability-Discovery"><a href="#Vulnerability-Discovery" class="headerlink" title="Vulnerability Discovery"></a>Vulnerability Discovery</h5><p><img src="/2024/03/21/Summary-of-Firm-AFL/1day.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2024/03/21/Summary-of-Firm-AFL/crashes.jpeg" srcset="/img/loading.gif" lazyload></p>
 <h3 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6. Limitations"></a>6. Limitations</h3><ul>
 <li>Limitations on supported CPU architectures.</li>
 <li>Limitations on supported IoT firmware.</li>
