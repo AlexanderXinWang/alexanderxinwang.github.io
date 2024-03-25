@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/1day.jpeg">
 <meta property="og:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/crashes.jpeg">
 <meta property="article:published_time" content="2024-03-21T04:55:21.000Z">
-<meta property="article:modified_time" content="2024-03-25T20:31:54.168Z">
+<meta property="article:modified_time" content="2024-03-25T23:32:35.847Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/2024/03/21/Summary-of-Firm-AFL/solution.jpeg">
@@ -558,7 +558,7 @@ emulation.</li>
 <h5 id="solution-1">Solution</h5>
 <p>Combines the best aspects of system-mode emulation and user-mode
 emulation.</p>
-<p><img src="solution.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="solution.jpeg" srcset="/img/loading.gif" lazyload width="60%" height="60%"></p>
 <ul>
 <li>Boot up the IoT firmware in the system-mode emulator and the
 user-level programs.</li>
@@ -673,7 +673,7 @@ Implementation</h3>
 Process Emulation</h4>
 <p>Replace the user-mode QEMU with augmented process emulation in
 AFL.</p>
-<p><img src="AFL.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="AFL.jpeg" srcset="/img/loading.gif" lazyload width="80%" height="80%"></p>
 <h5 id="bootstrapping-1">Bootstrapping</h5>
 <ul>
 <li><p><code>fork-server</code>(system-mode emulation): boot up the
@@ -769,8 +769,8 @@ Optimization</h5>
 successfully addressed the three bottlenecks (memory address
 translation, dynamic code translation, and syscall emulation).</p>
 <h5 id="vulnerability-discovery">Vulnerability Discovery</h5>
-<p><img src="1day.jpeg" srcset="/img/loading.gif" lazyload width="50%" height="50%"></p>
-<p><img src="crashes.jpeg" srcset="/img/loading.gif" lazyload width="50%" height="50%"></p>
+<p><img src="1day.jpeg" srcset="/img/loading.gif" lazyload width="80%" height="80%"></p>
+<p><img src="crashes.jpeg" srcset="/img/loading.gif" lazyload width="80%" height="80%"></p>
 <p>Firm-AFL is able to find 1-day vulnerabilities much faster than
 system-mode emulation based fuzzing and is able to find 0-day
 vulnerabilities.</p>
