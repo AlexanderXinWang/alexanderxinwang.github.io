@@ -16,12 +16,12 @@
   <meta name="author" content="Xin Wang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="BackgroundStatic Analysis Performed without actually executing the programs  Performed on the source code&#x2F;object code  A high false rate in practice   Dynamic Analysis Execute the target program in">
+    <meta name="description" content="Background Static Analysis  Performed without actually executing the programs Performed on the source code&#x2F;object code A high false rate in practice  Dynamic Analysis  Execute the target program in r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fuzzing A Survey">
 <meta property="og:url" content="http://example.com/2024/03/01/Fuzzing-A-Survey/index.html">
 <meta property="og:site_name" content="Xin Wang">
-<meta property="og:description" content="BackgroundStatic Analysis Performed without actually executing the programs  Performed on the source code&#x2F;object code  A high false rate in practice   Dynamic Analysis Execute the target program in">
+<meta property="og:description" content="Background Static Analysis  Performed without actually executing the programs Performed on the source code&#x2F;object code A high false rate in practice  Dynamic Analysis  Execute the target program in r">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/03/01/Fuzzing-A-Survey/Fuzzing.jpg">
 <meta property="og:image" content="http://example.com/2024/03/01/Fuzzing-A-Survey/AFL.jpg">
@@ -375,82 +375,87 @@ mjx-container[display="true"] + br {
             
               <div class="markdown-body">
                 
-                <img src="Fuzzing.jpg" srcset="/img/loading.gif" lazyload>
-
-<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><h4 id="Static-Analysis"><a href="#Static-Analysis" class="headerlink" title="Static Analysis"></a>Static Analysis</h4><ul>
-<li><p>Performed without actually executing the programs</p>
-</li>
-<li><p>Performed on the source code/object code</p>
-</li>
-<li><p>A high false rate in practice</p>
-</li>
+                <p><img src="Fuzzing.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="background">Background</h3>
+<h4 id="static-analysis">Static Analysis</h4>
+<ul>
+<li><p>Performed without actually executing the programs</p></li>
+<li><p>Performed on the source code/object code</p></li>
+<li><p>A high false rate in practice</p></li>
 </ul>
-<h4 id="Dynamic-Analysis"><a href="#Dynamic-Analysis" class="headerlink" title="Dynamic Analysis"></a>Dynamic Analysis</h4><ul>
-<li><p>Execute the target program in real systems or emulators</p>
-</li>
-<li><p>High accuracy</p>
-</li>
-<li><p>Slow speed, low efficiency, high requirements on the techinical level of testers</p>
-</li>
-<li><p>Poor scalability and difficult to carry out large-scale testing</p>
-</li>
+<h4 id="dynamic-analysis">Dynamic Analysis</h4>
+<ul>
+<li><p>Execute the target program in real systems or emulators</p></li>
+<li><p>High accuracy</p></li>
+<li><p>Slow speed, low efficiency, high requirements on the techinical
+level of testers</p></li>
+<li><p>Poor scalability and difficult to carry out large-scale
+testing</p></li>
 </ul>
-<h4 id="Symbolic-Execution"><a href="#Symbolic-Execution" class="headerlink" title="Symbolic Execution"></a>Symbolic Execution</h4><ul>
+<h4 id="symbolic-execution">Symbolic Execution</h4>
+<ul>
 <li>Symbolizing the program inputs</li>
 <li>Maintains a set of constraints for each execution path</li>
 <li>Path explosion problem</li>
 <li>Environment interactions inconsistency</li>
 </ul>
-<h4 id="Fuzzing"><a href="#Fuzzing" class="headerlink" title="Fuzzing"></a>Fuzzing</h4><ul>
-<li>Generate massive normal and abnormal inputs to target applications</li>
+<h4 id="fuzzing">Fuzzing</h4>
+<ul>
+<li>Generate massive normal and abnormal inputs to target
+applications</li>
 <li>Can be performed with or without the source code</li>
 <li>Low efficiency and Low code coverage</li>
 </ul>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Technique</th>
 <th>Easy to start?</th>
 <th>Accuracy</th>
 <th>Scalability</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>static analysis</td>
 <td>easy</td>
 <td>low</td>
 <td>relatively good</td>
 </tr>
-<tr>
+<tr class="even">
 <td>dynamic analysis</td>
 <td>hard</td>
 <td>high</td>
 <td>uncertain</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>symbolic execution</td>
 <td>hard</td>
 <td>high</td>
 <td>bad</td>
 </tr>
-<tr>
+<tr class="even">
 <td>fuzzing</td>
 <td>easy</td>
 <td>high</td>
 <td>good</td>
 </tr>
-</tbody></table>
-<h3 id="Fuzzing-1"><a href="#Fuzzing-1" class="headerlink" title="Fuzzing"></a>Fuzzing</h3><h4 id="Working-Process"><a href="#Working-Process" class="headerlink" title="Working Process"></a>Working Process</h4><pre><code class=" mermaid">graph TD
+</tbody>
+</table>
+<h3 id="fuzzing-1">Fuzzing</h3>
+<h4 id="working-process">Working Process</h4>
+<pre><code class=" mermaid">graph TD
   A(start) --&gt; B(testcase generation)
   B --&gt; C(program execution)
   C --&gt; D{Violation?}
   D --&gt;|Y| E(bugs)
   D --&gt;|N| B
 </code></pre>
-
-<p>The quality of generated testcases directly affects the test effects.</p>
+<p>The quality of generated testcases directly affects the test
+effects.</p>
 <ul>
-<li>Inputs should meet the requirement of tested programs for the input format as far as possible.</li>
+<li>Inputs should meet the requirement of tested programs for the input
+format as far as possible.</li>
 <li>Inputs should be broken enough to likely fail the program.</li>
 </ul>
 <p><u>Broken enough testcases generation is a main challenge.</u></p>
@@ -459,19 +464,22 @@ mjx-container[display="true"] + br {
 <li>Generation based generators</li>
 <li>Mutation based generators</li>
 </ul>
-<p>Fuzzers monitor the execution state during the execution of target programs, expecting exceptions and crashes.</p>
-<p>In the analyzing stage, try to determine the location and root cause of captured violations.</p>
+<p>Fuzzers monitor the execution state during the execution of target
+programs, expecting exceptions and crashes.</p>
+<p>In the analyzing stage, try to determine the location and root cause
+of captured violations.</p>
 <ul>
 <li>Debuggers: GDB, windbg</li>
 <li>Binary analysis tools: IDA Pro, OllyDbg</li>
 <li>Binary instrumentation tools: Pin</li>
 </ul>
-<h4 id="Types-of-Fuzzers"><a href="#Types-of-Fuzzers" class="headerlink" title="Types of  Fuzzers"></a>Types of  Fuzzers</h4><h5 id="Inputs-Based-Classification"><a href="#Inputs-Based-Classification" class="headerlink" title="Inputs Based Classification"></a>Inputs Based Classification</h5><p><em>Generation Based Fuzzers</em></p>
+<h4 id="types-of-fuzzers">Types of Fuzzers</h4>
+<h5 id="inputs-based-classification">Inputs Based Classification</h5>
+<p><em>Generation Based Fuzzers</em></p>
 <ul>
-<li><p>Knowledge of program input is required</p>
-</li>
-<li><p>Validation usually through a predefined configuration file (<strong>File Format Fuzzing</strong>)</p>
-</li>
+<li><p>Knowledge of program input is required</p></li>
+<li><p>Validation usually through a predefined configuration file
+(<strong>File Format Fuzzing</strong>)</p></li>
 </ul>
 <p><em>Mutation Based Fuzzers</em></p>
 <ul>
@@ -479,8 +487,9 @@ mjx-container[display="true"] + br {
 <li>Testcases are mutated from the initial inputs</li>
 </ul>
 <table>
+
 <thead>
-<tr>
+<tr class="header">
 <th>Fuzzer</th>
 <th>Easy to start?</th>
 <th>Priori knowledge</th>
@@ -488,25 +497,33 @@ mjx-container[display="true"] + br {
 <th>Ability to pass validation</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td>Generation</td>
 <td>hard</td>
 <td>needed</td>
 <td>high</td>
 <td>strong</td>
 </tr>
-<tr>
+<tr class="even">
 <td>Mutation</td>
 <td>easy</td>
 <td>not needed</td>
 <td>low, affected by initial inputs</td>
 <td>weak</td>
 </tr>
-</tbody></table>
-<h5 id="Source-Code-and-Program-Degree-Based-Classification"><a href="#Source-Code-and-Program-Degree-Based-Classification" class="headerlink" title="Source Code and Program Degree-Based Classification"></a>Source Code and Program Degree-Based Classification</h5><p><em>White Box</em>: have access to the source code of programs</p>
-<p><em>Black Box</em>: without any knowledge of target program internals</p>
-<p><em>Gray Box</em>: without source code but gain internal info through program analysis</p>
-<h5 id="Strategy-Based-Classification"><a href="#Strategy-Based-Classification" class="headerlink" title="Strategy Based Classification"></a>Strategy Based Classification</h5><p><em>Direct Fuzzing</em></p>
+</tbody>
+</table>
+<h5 id="source-code-and-program-degree-based-classification">Source Code
+and Program Degree-Based Classification</h5>
+<p><em>White Box</em>: have access to the source code of programs</p>
+<p><em>Black Box</em>: without any knowledge of target program
+internals</p>
+<p><em>Gray Box</em>: without source code but gain internal info through
+program analysis</p>
+<h5 id="strategy-based-classification">Strategy Based
+Classification</h5>
+<p><em>Direct Fuzzing</em></p>
 <ul>
 <li>Generate testcases that cover target code and target paths</li>
 <li>Expect a faster test</li>
@@ -516,98 +533,120 @@ mjx-container[display="true"] + br {
 <li>Generate testcases that covers as much code as possible</li>
 <li>Expect a thorough test</li>
 </ul>
-<p><u>Key Problem: How to extract the information of executed paths</u></p>
-<h5 id="Feedback-Based-Classification"><a href="#Feedback-Based-Classification" class="headerlink" title="Feedback Based Classification"></a>Feedback Based Classification</h5><blockquote>
-<p>A feedback between the monitoring of program execution state and testcase generation</p>
+<p><u>Key Problem: How to extract the information of executed
+paths</u></p>
+<h5 id="feedback-based-classification">Feedback Based
+Classification</h5>
+<blockquote>
+<p>A feedback between the monitoring of program execution state and
+testcase generation</p>
 </blockquote>
 <p><em>Smart Fuzzer</em></p>
 <ul>
-<li>Adjust testcases generation based on the collected info (how testcases affect the program behavior)</li>
-<li>Feedback can be used to determine the mutation part and way of testcases (in Mutation Fuzzer)</li>
+<li>Adjust testcases generation based on the collected info (how
+testcases affect the program behavior)</li>
+<li>Feedback can be used to determine the mutation part and way of
+testcases (in Mutation Fuzzer)</li>
 </ul>
 <p><em>Dumb Fuzzer</em></p>
 <ul>
 <li>Better testing speed</li>
 </ul>
-<h4 id="Key-Challenges-in-Fuzzing"><a href="#Key-Challenges-in-Fuzzing" class="headerlink" title="Key Challenges in Fuzzing"></a>Key Challenges in Fuzzing</h4><p>How to mutate seed inputs</p>
+<h4 id="key-challenges-in-fuzzing">Key Challenges in Fuzzing</h4>
+<p>How to mutate seed inputs</p>
 <ul>
-<li>where to mutate<ul>
-<li>only mutations on a few key positions would affect the control flow of the execution</li>
-</ul>
-</li>
-<li>how to mutate<ul>
+<li>where to mutate
+<ul>
+<li>only mutations on a few key positions would affect the control flow
+of the execution</li>
+</ul></li>
+<li>how to mutate
+<ul>
 <li>bind mutation results in the waste of testing resources</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>Low code coverage</p>
 <ul>
-<li>Achieve high vcoverage through large amounts of testcases is not a wise choice</li>
+<li>Achieve high vcoverage through large amounts of testcases is not a
+wise choice</li>
 </ul>
 <p>Passing the validation</p>
 <ul>
-<li>Testcases generated by black box or gray box fuzzers is hard to pass the validation for a blind generation strategy</li>
+<li>Testcases generated by black box or gray box fuzzers is hard to pass
+the validation for a blind generation strategy</li>
 </ul>
-<h3 id="Coverage-based-Fuzzing"><a href="#Coverage-based-Fuzzing" class="headerlink" title="Coverage-based Fuzzing"></a>Coverage-based Fuzzing</h3><h4 id="Code-Coverage-Counting"><a href="#Code-Coverage-Counting" class="headerlink" title="Code Coverage Counting"></a>Code Coverage Counting</h4><p>Take basic blocks as the best granularity.</p>
+<h3 id="coverage-based-fuzzing">Coverage-based Fuzzing</h3>
+<h4 id="code-coverage-counting">Code Coverage Counting</h4>
+<p>Take basic blocks as the best granularity.</p>
 <ul>
 <li>The basic block is the smallest coherent units</li>
-<li>Measuring function or instruction would result in info loss/redundancy </li>
-<li>The basic block can be identified by the address of the first instruction</li>
-<li>Basic block info can be easily extracted through code instrumentation</li>
+<li>Measuring function or instruction would result in info
+loss/redundancy</li>
+<li>The basic block can be identified by the address of the first
+instruction</li>
+<li>Basic block info can be easily extracted through code
+instrumentation</li>
 </ul>
 <p>Two basic measurements based on basic blocks:</p>
 <ul>
 <li>Counting the executed basic blocks</li>
-<li>Counting the basic block transitions <ul>
-<li>Use graph representation to indicate program execution<ul>
+<li>Counting the basic block transitions
+<ul>
+<li>Use graph representation to indicate program execution
+<ul>
 <li>Vertices - basic blocks</li>
 <li>Edges - the transition between basic blocks</li>
 <li><u>Overlapped transition edge info may be lost</u></li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 </ul>
 <p><u>Example</u></p>
-<p>AFL provides two instrumentation modes according to whether the source is provided.</p>
+<p>AFL provides two instrumentation modes according to whether the
+source is provided.</p>
 <ul>
-<li>Compile-in Instrumentation <ul>
+<li>Compile-in Instrumentation
+<ul>
 <li>gcc mode</li>
 <li>llvm mode</li>
+</ul></li>
+<li>External Instrumentation
+<ul>
+<li>qemu mode: instrument code snippet when the basic block is
+translated to TCG blocks</li>
+</ul></li>
 </ul>
-</li>
-<li>External Instrumentation<ul>
-<li>qemu mode: instrument code snippet when the basic block is translated to TCG blocks</li>
-</ul>
-</li>
-</ul>
-<h4 id="Working-Process-of-Coverage-based-Fuzzing"><a href="#Working-Process-of-Coverage-based-Fuzzing" class="headerlink" title="Working Process of Coverage-based Fuzzing"></a>Working Process of Coverage-based Fuzzing</h4><ol>
-<li><p>Start from a given seed input. If not given, the fuzzer will construct one.</p>
-</li>
-<li><p>Repeatedly choose an interesting seed for the following mutation and testcases generation.</p>
-</li>
-<li><p>Crashed-triggered triggered testcases will be collected.</p>
-</li>
+<h4 id="working-process-of-coverage-based-fuzzing">Working Process of
+Coverage-based Fuzzing</h4>
+<ol type="1">
+<li><p>Start from a given seed input. If not given, the fuzzer will
+construct one.</p></li>
+<li><p>Repeatedly choose an interesting seed for the following mutation
+and testcases generation.</p></li>
+<li><p>Crashed-triggered triggered testcases will be collected.</p></li>
 <li><p>Other interesting testcases will be added to the seed pool.</p>
 <blockquote>
-<p>Testcases that reach new control flow edges are considered interesting.</p>
-</blockquote>
-</li>
-<li><p>The main fuzzing loop stops at a pre-configured timeout or an abort signal.</p>
-</li>
+<p>Testcases that reach new control flow edges are considered
+interesting.</p>
+</blockquote></li>
+<li><p>The main fuzzing loop stops at a pre-configured timeout or an
+abort signal.</p></li>
 </ol>
-<p>Fuzzers can track the execution via various methods. Two purposes are maintained for the track:</p>
+<p>Fuzzers can track the execution via various methods. Two purposes are
+maintained for the track:</p>
 <ul>
 <li>code coverage: pursue a thorough program state exploration</li>
 <li>security violation: for better bug-finding</li>
 </ul>
 <p><u>Example: Working process of AFL</u></p>
-<p><img src="/2024/03/01/Fuzzing-A-Survey/AFL.jpg" srcset="/img/loading.gif" lazyload></p>
-<h4 id="Key-Questions"><a href="#Key-Questions" class="headerlink" title="Key Questions"></a>Key Questions</h4><h5 id="How-to-get-initial-inputs"><a href="#How-to-get-initial-inputs" class="headerlink" title="How to get initial inputs?"></a>How to get initial inputs?</h5><p>Good initial seed inputs should meet:</p>
+<p><img src="AFL.jpg" srcset="/img/loading.gif" lazyload></p>
+<h4 id="key-questions">Key Questions</h4>
+<h5 id="how-to-get-initial-inputs">How to get initial inputs?</h5>
+<p>Good initial seed inputs should meet:</p>
 <ul>
 <li>Well-format seed inputs that can save CPU times</li>
 <li>Meet the requirement for complicated file format</li>
-<li>Mutation based on well-format seed input that could reach deeper and hard-to-reach paths</li>
+<li>Mutation based on well-format seed input that could reach deeper and
+hard-to-reach paths</li>
 <li>Can be reused during multiple tests.</li>
 </ul>
 <p>Commonly used method to gather seed inputs:</p>
@@ -616,16 +655,27 @@ mjx-container[display="true"] + br {
 <li>Crawling from the Internet</li>
 <li>Using existing POC samples</li>
 </ul>
-<h5 id="How-to-generate-testcases"><a href="#How-to-generate-testcases" class="headerlink" title="How to generate testcases?"></a>How to generate testcases?</h5><p>The quality of testcases is an important factor affecting the efficiency and effectiveness of fuzzing testing. Good testcases should:</p>
+<h5 id="how-to-generate-testcases">How to generate testcases?</h5>
+<p>The quality of testcases is an important factor affecting the
+efficiency and effectiveness of fuzzing testing. Good testcases
+should:</p>
 <ul>
-<li>explore more program execution states and cover more code in a shorter time</li>
-<li>target potentially vulnerable locations and bring a faster discovery of program bugs</li>
+<li>explore more program execution states and cover more code in a
+shorter time</li>
+<li>target potentially vulnerable locations and bring a faster discovery
+of program bugs</li>
 </ul>
-<h5 id="How-to-select-the-seed-from-the-pool"><a href="#How-to-select-the-seed-from-the-pool" class="headerlink" title="How to select the seed from the pool?"></a>How to select the seed from the pool?</h5><p>A good seed selection strategy can improve the fuzzing efficiency and help find more bugs, faster. With good seed selection strategies, fuzzers could</p>
+<h5 id="how-to-select-the-seed-from-the-pool">How to select the seed
+from the pool?</h5>
+<p>A good seed selection strategy can improve the fuzzing efficiency and
+help find more bugs, faster. With good seed selection strategies,
+fuzzers could</p>
 <ul>
 <li>Prioritize more helpful seeds.</li>
-<li>Reduce the waste of repeatedly executing paths and save computing resources.</li>
-<li>Optimally select seeds that cover deeper and more vulnerable code and help identifying hidden vulnerabilities faster.</li>
+<li>Reduce the waste of repeatedly executing paths and save computing
+resources.</li>
+<li>Optimally select seeds that cover deeper and more vulnerable code
+and help identifying hidden vulnerabilities faster.</li>
 </ul>
 <p><u>Example: AFLFast</u></p>
 <ul>
@@ -634,125 +684,159 @@ mjx-container[display="true"] + br {
 <li>Prioritize seeds that have been fuzzed fewer times</li>
 <li>Allocate more energy to seeds that exercise low-frequent paths</li>
 </ul>
-<h5 id="How-to-efficiently-test-applications"><a href="#How-to-efficiently-test-applications" class="headerlink" title="How to efficiently test applications?"></a>How to efficiently test applications?</h5><p>Repeatedly starting up and shutting target applications could greatly bring down the fuzzing efficiency.</p>
+<h5 id="how-to-efficiently-test-applications">How to efficiently test
+applications?</h5>
+<p>Repeatedly starting up and shutting target applications could greatly
+bring down the fuzzing efficiency.</p>
 <p><u>AFL</u>:</p>
 <ul>
-<li><em>forkserver</em>: create an identical clone of the already-loaded program and reuse the clone for each single run</li>
-<li><em>persistent mode</em>: avoid the overhead of the notoriously slow <code>execve()</code> syscall and the linking process</li>
-<li><em>parallel mode</em>: parallelize the testing on multi-core systems</li>
+<li><em>forkserver</em>: create an identical clone of the already-loaded
+program and reuse the clone for each single run</li>
+<li><em>persistent mode</em>: avoid the overhead of the notoriously slow
+<code>execve()</code> syscall and the linking process</li>
+<li><em>parallel mode</em>: parallelize the testing on multi-core
+systems</li>
 </ul>
-<h3 id="Techniques-Integrated-in-Fuzzing"><a href="#Techniques-Integrated-in-Fuzzing" class="headerlink" title="Techniques Integrated in Fuzzing"></a>Techniques Integrated in Fuzzing</h3><p>Multiple techniques are integrated into fuzzing to build a smarter fuzzer. Techniques include:</p>
+<h3 id="techniques-integrated-in-fuzzing">Techniques Integrated in
+Fuzzing</h3>
+<p>Multiple techniques are integrated into fuzzing to build a smarter
+fuzzer. Techniques include:</p>
 <ul>
 <li>Static analysis</li>
 <li>Taint analysis</li>
 <li>Instrumentation</li>
-<li>Symbolic execution </li>
+<li>Symbolic execution</li>
 <li>Machine learning</li>
 <li>Format Method</li>
 </ul>
-<p>There are two major phrases in fuzzing that those techniques are integrated to improve efficiency.</p>
-<h4 id="Testcase-Generation"><a href="#Testcase-Generation" class="headerlink" title="Testcase Generation"></a>Testcase Generation</h4><p>In generation-based fuzzing, the generator generates testcases according to the knowledge of the inputs’ data format.</p>
-<p>How to obtain the format information of inputs is a hard open problem</p>
+<p>There are two major phrases in fuzzing that those techniques are
+integrated to improve efficiency.</p>
+<h4 id="testcase-generation">Testcase Generation</h4>
+<p>In generation-based fuzzing, the generator generates testcases
+according to the knowledge of the inputs' data format.</p>
+<p>How to obtain the format information of inputs is a hard open
+problem</p>
 <ul>
-<li>machine learning techniques <ul>
+<li>machine learning techniques
+<ul>
 <li>recurrent neural networks to learn the grammar of input files</li>
 <li>use the learned grammar to generate format-fulfilled testcases</li>
-</ul>
-</li>
-<li>format methods<ul>
-<li>define a probabilistic context-sensitive grammar</li>
-<li>extract the format knowledge to generate well-format seed inputs</li>
-</ul>
-</li>
-</ul>
-<p>More state-of-the-art fuzzers employ a mutation-based fuzzing strategy. </p>
-<p>How to determine the location to modify and the value used in modifying is another key challenge.</p>
+</ul></li>
+<li>format methods
 <ul>
-<li>Taint analysis <ul>
-<li>track the affection of bytes on control flow to locate key bytes if seeds in mutation</li>
+<li>define a probabilistic context-sensitive grammar</li>
+<li>extract the format knowledge to generate well-format seed
+inputs</li>
+</ul></li>
 </ul>
-</li>
+<p>More state-of-the-art fuzzers employ a mutation-based fuzzing
+strategy.</p>
+<p>How to determine the location to modify and the value used in
+modifying is another key challenge.</p>
+<ul>
+<li>Taint analysis
+<ul>
+<li>track the affection of bytes on control flow to locate key bytes if
+seeds in mutation</li>
+</ul></li>
 <li>reverse engineering</li>
 <li>machine learning</li>
 </ul>
-<p>Scanning the binary code and collecting immediate values from condition judgement statements and utilizing the collected values as candidate values in the mutation process.</p>
-<h4 id="Program-Execution"><a href="#Program-Execution" class="headerlink" title="Program Execution"></a>Program Execution</h4><p>Two main problems in the execution phase:</p>
+<p>Scanning the binary code and collecting immediate values from
+condition judgement statements and utilizing the collected values as
+candidate values in the mutation process.</p>
+<h4 id="program-execution">Program Execution</h4>
+<p>Two main problems in the execution phase:</p>
 <ul>
-<li>how to guide the fuzzing process<ul>
-<li>instrumentation technique<ul>
+<li>how to guide the fuzzing process
+<ul>
+<li>instrumentation technique
+<ul>
 <li>record the path execution</li>
 <li>calculate the coverage information in coverage based fuzzing</li>
-<li>according to whether or not the source code is provided<ul>
+<li>according to whether or not the source code is provided
+<ul>
 <li>compiled-in instrumentation</li>
 <li>external instrumentation</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>stataic analysis technique (for directed fuzzing)<ul>
-<li>pattern recognition<ul>
-<li>specify and identify the target code</li>
-</ul>
-</li>
-<li>gather control flow information</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>how to explore a new path<ul>
-<li>static analysis, taint analysis<ul>
-<li>identify the block point in the execution for consequent solving</li>
-</ul>
-</li>
-<li>symbolic execution technique<ul>
-<li>compute values that fulfill specific conditional requirement by solving the constraint set</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Fuzzing-Towards-Different-Applications"><a href="#Fuzzing-Towards-Different-Applications" class="headerlink" title="Fuzzing Towards Different Applications"></a>Fuzzing Towards Different Applications</h3><h4 id="File-Format-Fuzzing"><a href="#File-Format-Fuzzing" class="headerlink" title="File Format Fuzzing"></a>File Format Fuzzing</h4><p>Fuzzing tests can be operated with files both with or without a standard format. The most commonly used document files (images and media) are files with standard formats.</p>
+</ul></li>
+</ul></li>
+<li>stataic analysis technique (for directed fuzzing)
 <ul>
-<li>Fuzzing on web browsers<ul>
+<li>pattern recognition
+<ul>
+<li>specify and identify the target code</li>
+</ul></li>
+<li>gather control flow information</li>
+</ul></li>
+</ul></li>
+<li>how to explore a new path
+<ul>
+<li>static analysis, taint analysis
+<ul>
+<li>identify the block point in the execution for consequent
+solving</li>
+</ul></li>
+<li>symbolic execution technique
+<ul>
+<li>compute values that fulfill specific conditional requirement by
+solving the constraint set</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="fuzzing-towards-different-applications">Fuzzing Towards
+Different Applications</h3>
+<h4 id="file-format-fuzzing">File Format Fuzzing</h4>
+<p>Fuzzing tests can be operated with files both with or without a
+standard format. The most commonly used document files (images and
+media) are files with standard formats.</p>
+<ul>
+<li>Fuzzing on web browsers
+<ul>
 <li>Grinder framework</li>
 <li>COMRaider</li>
 <li>BF3</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="kernel-Fuzzing"><a href="#kernel-Fuzzing" class="headerlink" title="kernel Fuzzing"></a>kernel Fuzzing</h4><p>Many problems are involved with in kernel fuzzing.</p>
+<h4 id="kernel-fuzzing">kernel Fuzzing</h4>
+<p>Many problems are involved with in kernel fuzzing.</p>
 <ul>
-<li>how to catch the crashes<ul>
-<li>crashed and hangs in the kernel will bring down the whole system</li>
-</ul>
-</li>
-<li>how to interact with the kernel<ul>
-<li>system authority mechanism results in a relatively closed execution environment</li>
+<li>how to catch the crashes
+<ul>
+<li>crashed and hangs in the kernel will bring down the whole
+system</li>
+</ul></li>
+<li>how to interact with the kernel
+<ul>
+<li>system authority mechanism results in a relatively closed execution
+environment</li>
 <li>currently used practice is calling kernel API functions</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>Kernel fuzzers can be divided into:</p>
 <ul>
-<li>knowledge based fuzzers<ul>
-<li>knowledge of kernel API functions is leveraged<ul>
-<li>parameters of APi calling should be well-formed and follow the API specification</li>
+<li>knowledge based fuzzers
+<ul>
+<li>knowledge of kernel API functions is leveraged
+<ul>
+<li>parameters of APi calling should be well-formed and follow the API
+specification</li>
 <li>ordering of kernel API calls should be valid</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>coverage guided fuzzers<ul>
+</ul></li>
+</ul></li>
+<li>coverage guided fuzzers
+<ul>
 <li>a great success in finding userland application bugs</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="Fuzzing-of-Protocols"><a href="#Fuzzing-of-Protocols" class="headerlink" title="Fuzzing of Protocols"></a>Fuzzing of Protocols</h4><ul>
+<h4 id="fuzzing-of-protocols">Fuzzing of Protocols</h4>
+<ul>
 <li>services may define their own communication protocols</li>
 <li>hard to follow the specification such as the RFC document</li>
 </ul>
-<h3 id="New-Trends-of-Fuzzing"><a href="#New-Trends-of-Fuzzing" class="headerlink" title="New Trends of Fuzzing"></a>New Trends of Fuzzing</h3><ul>
-<li>smart fuzzing provides more possibilities for the improvement of fuzzing</li>
+<h3 id="new-trends-of-fuzzing">New Trends of Fuzzing</h3>
+<ul>
+<li>smart fuzzing provides more possibilities for the improvement of
+fuzzing</li>
 <li>new techniques could help improve vulnerability in many ways</li>
 <li>new system features and hardware features should not be ignored</li>
 </ul>
